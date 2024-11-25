@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Effect</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: aqua;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            position: relative;
+            width: 200px;
+        }
+
+        .d1, .d2, .d3, .d4, .d5 {
+            background-color: antiquewhite;
+            border: 2px solid black;
+            height: 80px;
+            width: 200px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            transition: all 0.5s ease;
+        }
+
+        /* Initial Colors for each */
+        .d1 { z-index: 5; }
+        .d2 { background-color: rgb(5, 166, 96); z-index: 4; opacity: 0; top: 80px; }
+        .d3 { background-color: rgb(26, 74, 218); z-index: 3; opacity: 0; top: 160px; }
+        .d4 { background-color: rgb(231, 14, 255); z-index: 2; opacity: 0; top: 240px; }
+        .d5 { background-color: rgb(120, 88, 47); z-index: 1; opacity: 0; top: 320px; }
+
+        /* Hover Effect */
+        .container:hover .d2 {
+            opacity: 1;
+            top: 80px;
+        }
+
+        .container:hover .d3 {
+            opacity: 1;
+            top: 160px;
+        }
+
+        .container:hover .d4 {
+            opacity: 1;
+            top: 240px;
+        }
+
+        .container:hover .d5 {
+            opacity: 1;
+            top: 320px;
+        }
+
+        .container:hover {
+            display: block; /* Keeps spacing */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="d1">HELLO</div>
+        <div class="d2">THIS</div>
+        <div class="d3">IS</div>
+        <div class="d4">A</div>
+        <div class="d5"><a href="#" style="text-decoration: none; color: white;">CREATION</a></div>
+    </div>
+</body>
+</html>
