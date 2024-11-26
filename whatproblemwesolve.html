@@ -3,14 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>What Problem We Solve</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <style>
         body{
             margin: 0px;
             padding: 0px;
+            box-sizing: border-box;
+        }
+        header{
+            width: 100%;
+            background-color: black;
+            height: 50px;
+            overflow: hidden;
+        }
+        .span{
+            padding: 7px 0px 0px 40px;
+            font-size: 25px;
+            width:fit-content;
+        }
+        #smart{
+            color: aliceblue;
+        }
+        #bins{
+            color: aqua;
+        }
+        header{
+            display: flex;
+            color: aliceblue;
+        }
+        header ul{
+            display: flex;
+            text-align: center;
+            justify-content:center;
+            list-style: none;
+        }
+        header ul li{
+            padding: 11px 105px 0px 0px;
+            font-size: 20px;
+            
+        }
+        header a{
+            text-decoration: none;
+            color: aliceblue;
+        }
+        #home{
+            padding-left:  195px;
+        }
+        .hero {
+            height: 350px;
+            background-color: #00ffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 25px;
+            overflow: hidden;
+        }
+        #tech{
+            font-size: 20px;
+        }
+        .navbar a:hover{
+            color: #00ffff;
+        }
+        .so{
+            height: 50px;
+            color:#010f0f;
+            font-weight: 200;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            padding-left: 20px;
+            background-color: rgb(245, 250, 251);
+            border: 1px solid black;
+            overflow: hidden;
         }
         .top{
-
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -65,6 +133,11 @@
 .heads mark{
     padding: 10px;
 }
+.span{
+            padding: 7px 0px 0px 40px;
+            font-size: 25px;
+            width:fit-content;
+        }
 
     /* Footer */
     .footer {
@@ -99,17 +172,331 @@
         padding: 5px;
     }
     .social-links a:hover{
-        color:#f1f9ff;
+        color:#f1f9ff;}
+@media screen and (max-width: 430px) {
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
     }
+
+    /* Header adjustments */
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        background-color: black;
+    }
+
+    .span {
+        font-size: 20px;
+        padding-left: 10px;
+    }
+
+    .toggle {
+        font-size: 25px;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    /* Navbar adjustments */
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 250px;
+        height: 100%;
+        background-color: #333;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        transition: left 0.3s ease;
+        z-index: 1000;
+    }
+
+    .navbar ul {
+        list-style: none;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .navbar ul li {
+        margin-bottom: 15px;
+    }
+
+    .navbar ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        display: block;
+        padding: 10px;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+
+    .navbar ul li a:hover {
+        background-color: #00ffff;
+    }
+
+    .navbar.show {
+        left: 0;
+    }
+
+    /* Hero section */
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 18px;
+        margin: 0;
+    }
+
+    #tech {
+        font-size: 14px;
+        margin: 10px 0;
+    }
+
+    /* Content adjustments */
+    .list {
+        padding: 20px;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .image {
+        width: 100%;
+        height: auto;
+        float: none;
+        margin: 15px 0;
+    }
+
+    .video {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .video video {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .last {
+        padding: 10px;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .footer {
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+    @media screen and (max-width: 430px) {
+    *{
+        box-sizing: border-box;
+    }
+    /* Hide the navbar and show the toggle menu */
+    .navbar {
+        display: none;
+    }
+
+    .toggle {
+        display: flex;
+        justify-content: end;
+        padding-left: 220px;
+    }
+
+    /* Center hero text and adjust padding */
+    .hero h1 {
+        padding: 0 15px;
+        font-size: 19px;
+        text-align: center;
+    }
+
+    #tech {
+        font-size: 13px;
+        text-align: center;
+    }
+
+    /* Stack waste fact cards vertically */
+    .wastefact {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .wastefact div {
+        padding: 15px;
+        text-align: center;
+        height: auto; /* Let divs adjust their height automatically */
+    }
+    header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: black;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: -100%; /* Start off-screen */
+    width: 250px;
+    height: 100%; /* Full screen height */
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+    transition: left 0.3s ease; /* Smooth slide-in effect */
+}
+
+.navbar ul {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    width: 100%;
+    margin-bottom: 15px; /* Add spacing between items */
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    display: block; /* Ensure full width for hover effect */
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: #00ffff;
+}
+
+.navbar.show {
+    left: 0; /* Slide into view */
+}
+
+.toggle {
+    font-size: 25px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1000; /* Ensure it's above the navbar */
+}
+#home{
+    padding-left: 0;
+}
+    /* Center content in the About Us section */
+    .aboutus0 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .aboutus1 {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .aboutus1 img, .aboutus4 img {
+        width: 200px;
+        height: 200px;
+    }
+    .aboutus3{
+        display: flex;
+        flex-direction: column;
+       align-items: center;
+        text-align: center;
+    }
+    .aboutus4{
+        display: flex;
+        flex-direction: column;
+        padding: 18px 75px 18px 75px;
+        gap: 20px;
+       align-items: center;
+        text-align: center;
+    }
+    .iimpact{flex-direction: column;
+       align-items: center;
+        text-align: center;
+    }
+    .impact0{
+        display: flex;
+        flex-direction: column;
+        padding: 18px 55px 18px 55px;
+        gap: 20px;
+       align-items: center;
+        text-align: center;
+    }
+    
+    /* Footer alignment adjustments */
+    .footer {
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+    .so{
+        display: flex;
+        justify-content: center;
+    }
+    .aboutus{
+        display: flex;
+        justify-content: center;
+    }
+    .aboutus2{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .impact{
+        display: flex;
+        justify-content: center;
+    }
+}
+}
+
+
     </style>
 </head>
 <body>
-    <div class="top">
-        <div class="homel"><a href="index.html">Home</a></div>
-        <div><h1>What Problem We Solve?</h1></div>
-    </div>
+    <header>
+        <div class="span"><a href="index.html">
+            <span  id="smart">smart</span><span id="bins">bins</span>
+        </a></div>
+        <ul class="navbar">
+                <li id="home"><a href="index.html">Home</a></li>
+                <li style="text-align: left; width: 330px;"><a href="WhatProblemWeSolve.html">What Problem we Solve?</a></li>
+                <li><a href="Services.html">Services </a></li>
+                <li><a href="ContactUs.html">Contact Us</a></li>
+        </ul>
+        <a href="#"  class="toggle"><i class="fa-solid fa-bars"></i></a>
+        </div>
+    </header>
     <div class="list">
-        <P class="heads"><mark>Smart Waste Management System is specifically designed for monitoring and managing waste in public dustbins.</mark></P>
+        <P class="heads">Smart Waste Management System is specifically designed for monitoring and managing waste in public dustbins.</P>
         <img class="image"src="media/OIP.jpeg">
         <p>
                 The key issues it addresses with dustbin are:
@@ -123,7 +510,7 @@
     <div class="last">We at smart<span>bins</span> are also looking forward to have proper treatment of the wastes that we collect as of now we're only  waste collector but by the end of next year we will be treating waste also.</div>
     <div class="video">
         <video src="media\smart-waste-management-using-iot-real-benefits-of-sensoneo-1080-publer.io.mp4" controls   width="500px"></video>
-        <div ><mark>Take a look at how our smart waste management system works</mark></div>
+        <div >Take a look at how our smart waste management system works</div>
     </div>
     <footer class="footer">
         <div class="container">
@@ -135,6 +522,14 @@
             <a href="https://www.instagram.com" target="_blank" class="social-icon">Instagram</a>
             <a href="https://www.linkedin.com" target="_blank" class="social-icon">LinkedIn</a>
         </div>
-    </footer>
+    </footer><script>document.addEventListener("DOMContentLoaded", function () {
+        const toggleButton = document.querySelector(".toggle");
+        const navbar = document.querySelector(".navbar");
+    
+        toggleButton.addEventListener("click", function () {
+            navbar.classList.toggle("show");
+        });
+    });
+    </script>
 </body>
 </html>
