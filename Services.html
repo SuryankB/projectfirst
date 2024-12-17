@@ -5,56 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SmartBin Types | SmartBin Solutions</title>
     <link rel="stylesheet" href="styles.css">
-    <style>* {
+    <style>
+    * {
         margin: 0;
         padding: 0;
-        box-sizing: border-box;
-        font-family: Arial, sans-serif;
     }
     
     body {
         color: #333;
         line-height: 1.6;
     }
-    .header-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-    
-.home-button {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    background-color: #34c514;
-    color: #000500;
-    padding: 015px 15px;
-    border-radius: 4px;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: bold;
-}
-.home-button:hover {
-    background-color: #e7e7e7;
-}
-    /* Header Styles */
-    .header {
-        background: #4CAF50;
-        color: #fff;
-        padding: 2rem 0;
-        text-align: center;
+    .navbar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-    
-    .header h1 {
-        font-size: 35px;
-        margin-bottom: 5px;
-    }
-    
-    .header p {
-        font-size: 20px;
-        margin-top: 15px;
-    }
-    
+    header{
+            width: 100%;
+            background-color: black;
+            height: 50px;
+            overflow: hidden;
+        }
+        .span{
+            padding: 7px 0px 0px 40px;
+            font-size: 20px;
+            width:fit-content;
+        }
+        #smart{
+            color: aliceblue;
+            
+        }
+        #bins{
+            color: aqua;
+        }
+        header{
+            display: flex;
+            color: aliceblue;
+        }
+        header ul{
+            display: flex;
+            text-align: center;
+            justify-content:center;
+            list-style: none;
+        }
+        header ul li{
+            padding: 1px 100px 0px 0px;
+            font-size: 20px;
+            
+        }
+        header a{
+            text-decoration: none;
+            color: aliceblue;
+        }
+        #home{
+            padding-left:  195px;
+        }
+        
+        #tech{
+            font-size: 20px;
+        }
+        .navbar a:hover{
+            color: #00ffff;
+        }
     /* Table Styles */
     .services-section {
         padding: 25px 0;
@@ -158,13 +170,19 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <a href="index.html" style="font-size: 20px;" class="home-button">Home</a>
-                <h1>Our SmartBin Types</h1>
-                <p>Find the right SmartBin model to meet your waste management needs.</p>
-            </div></div>
+    <header>
+        <a href="index.html" style="text-decoration: none;">
+
+        <div class="span" style="font-size: 25px;">
+            <span id="smart">smart</span><span id="bins">bins</span>
+        </div></a>
+        <ul class="navbar">
+                <li id="home"><a href="index.html">Home</a></li>
+                <li><a href="whatproblemwesolve.html">What Problem we Solve?</a></li>
+                <li><a href="Services.html">Services </a></li>
+                <li><a href="ContactUs.html">Contact Us</a></li>
+        </ul>
+        <div>    <a href="#"  class="toggle"><i class="fa-solid fa-bars"></i></a></div>
     </header>
     <p class="order">Want to order head to<a href="ContactUs.html">Contact Us </a> section</p>
 <!-- SmartBin Types Table -->

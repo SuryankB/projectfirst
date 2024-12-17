@@ -17,7 +17,7 @@
             overflow: hidden;
         }
         .span{
-            padding: 7px 0px 0px 40px;
+            padding: 4px 0px 0px 35px;
             font-size: 25px;
             width:fit-content;
         }
@@ -38,7 +38,7 @@
             list-style: none;
         }
         header ul li{
-            padding: 11px 105px 0px 0px;
+            padding: 2px 105px 0px 0px;
             font-size: 20px;
             
         }
@@ -47,7 +47,7 @@
             color: aliceblue;
         }
         #home{
-            padding-left:  195px;
+            padding-left:  175px;
         }
         .hero {
             height: 350px;
@@ -343,7 +343,69 @@
     justify-content: center;
     align-items: center;
     display: none;
+}header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    padding: 0 20px;
 }
+
+.navbar {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px; /* Adds spacing between items */
+}
+
+.navbar a {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #00ffff;
+}
+
+/* Mobile view: Show toggle menu and hide navbar */
+.toggle {
+    display: none;
+    font-size: 25px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Adjust the navbar for mobile screens */
+@media screen and (max-width: 430px) {
+    .navbar {
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 50px; /* Below the header */
+        left: -100%; /* Initially hidden */
+        width: 100%;
+        padding: 20px 10px; /* Add padding for spacing */
+        transition: left 0.3s ease;
+        z-index: 999;
+    }
+
+    .navbar.show {
+        left: 0; /* Slide into view when the toggle is clicked */
+    }
+
+    .navbar li {
+        text-align: left; /* Align items to the left */
+        padding: 10px 0; /* Add spacing between items */
+    }
+
+    .toggle {
+        display: block; /* Show toggle icon */
+    }
+}
+
 @media screen and (max-width: 430px) {
     *{
         box-sizing: border-box;
@@ -421,6 +483,7 @@
     color: #fff;
     text-decoration: none;
     font-size: 20px;
+    
     display: block; /* Ensure full width for hover effect */
     padding: 10px;
     border-radius: 4px;
@@ -528,10 +591,10 @@
         </div>
         <ul class="navbar">
                 <li id="home"><a href="index.html">Home</a></li>
-                <li style="text-align: left; width: 330px;"><a href="whatproblemwesolve.html">What Problem we Solve?</a></li>
+                <li><a class="w" href="whatproblemwesolve.html">What Problem we Solve?</a></li>
                 <li><a href="Services.html">Services </a></li>
                 <li><a href="ContactUs.html">Contact Us</a></li>
-        </ul>
+        </ul><div>
         <a href="#"  class="toggle"><i class="fa-solid fa-bars"></i></a>
         </div>
     </header>

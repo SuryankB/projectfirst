@@ -5,15 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - SmartBins</title>
     <style>
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        header {
+            width: 100%;
+            background-color: black;
+            height: 50px;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+        .span {
+            padding: 7px 0px 0px 40px;
+            font-size: 25px;
+            width: fit-content;
+        }
+        #smart {
+            color: aliceblue;
+        }
+        #bins {
+            color: aqua;
+        }
+        header {
+            display: flex;
+            color: aliceblue;
+        }
+        header ul {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            list-style: none;
+        }
+        header ul li {
+            padding: 1px 80px 0px 0px;
+            font-size: 20px;
+        }
+        header a {
+            text-decoration: none;
+            color: aliceblue;
+        }
+        #home {
+            padding-left: 155px;
+        }
+        #tech {
+            font-size: 20px;
+        }
+        .navbar a:hover {
+            color: #00ffff;
+        }
         body {
-            font-family: Arial, sans-serif;
             background-color: #f2f7fb;
             margin: 0;
             padding: 0;
         }
 
         .form {
-            padding: 15px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -21,11 +69,11 @@
             padding: 20px;
             width: 100%;
             max-width: 600px;
-            margin: 0 auto;
+            margin:auto;
             background-color: white;
-            border: 2px solid #0077b6; /* Border added */
-            border-radius: 8px; /* Rounded corners */
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Optional shadow for a subtle 3D effect */
+            border: 2px solid #0077b6;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
         .container {
@@ -41,7 +89,7 @@
         }
 
         .form div {
-            margin-bottom: 15px; /* Added gap between fields */
+            margin-bottom: 15px;
             width: 100%;
         }
 
@@ -106,78 +154,89 @@
             background-color: #0077b6;
             margin-top: 10px;
         }
-        #bi{color: rgb(0, 162, 255);}
-        
-    /* Footer */
-    .footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px 0;
-        font-size: 19px;
-    }
-    
-    .footer p {
-        margin: 0;
-    }
-    .social-links a{
-        text-decoration: none;
-        color: wheat;
-    }
-    .checkboxes{
-        font-size: 16ppx;
-    }
+        #bi {
+            color: rgb(0, 162, 255);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 19px;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+        .social-links a {
+            text-decoration: none;
+            color: wheat;
+        }
+        .checkboxes {
+            font-size: 16px;
+        }
     </style>
 </head>
 <body>
+    <header>
+        <a href="index.html" style="text-decoration: none;">
 
-    <div class="container">
-        <h2 ><u>Contact Us</u> <div style="float: right;
-        padding-left: 350px;">smart<span id="bi">bins</span></h2></div>
-    </div>
-
-    <form action="#" method="post" class="form">
-        <div><label for="name">Name</label></div>
-        <div><input type="text" id="name" name="name" required></div>
-
-        <div><label for="email">Email</label></div>
-        <div><input type="email" id="email" name="email" required></div>
-
-        <div><label for="address">Address</label></div>
-        <div><input type="text" id="address" name="address" required></div>
-
-        <div><label for="mobile">Phone Number</label></div>
-        <div><input type="text" id="mobile" name="phone_number" pattern="[0-9]{10}" required></div>
-
-        <div><label for="message">Any other Message</label></div>
-        <div><textarea id="message" name="message" rows="5" required></textarea></div>
-        <div><label for="type"></label></div>
-        <!-- Radio Button Group -->
-        <div class="radio-group">
-            <label>Do you have our app?</label>
-            <input type="radio" id="yes" name="app" value="yes">
-            <label for="yes">Yes</label>
-            <input type="radio" id="no" name="app" value="no">
-            <label for="no">No</label>
-        </div>
+        <div class="span">
+            <span id="smart">smart</span><span id="bins">bins</span>
+        </div></a>
+        <ul class="navbar">
+            <li id="home"><a href="index.html">Home</a></li>
+            <li><a href="whatproblemwesolve.html">What Problem we Solve?</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="ContactUs.html">Contact Us</a></li>
+        </ul>
         <div>
-        <div class="checkboxes">
-            Which type of dustbin you want?
-            <select name="type" id="type">
-                <option value="Basic">Basic SmartBin</option>
-                <option value="Advanced SmartBin">Advanced SmartBin</option>
-                <option value="Compact SmartBin">Compact SmartBin</option>
-                <option value="Smart Recycling Bin">Smart Recycling Bin</option>
-                <option value="Large-Capacity SmartBin">Large-Capacity SmartBin</option>    
-            </select>
+            <a href="#" class="toggle"><i class="fa-solid fa-bars"></i></a>
         </div>
-        </div>
-        <button type="submit">Submit</button>
-        <button type="reset">Reset</button>
-        <div class="home-button">
-            <a href="index.html">Home</a>
-        </div>
-    </form>
+    </header>
+        <!-- Form Content -->
+        <form action="#" method="post" class="form">
+            <div><label for="name">Name</label></div>
+            <div><input type="text" id="name" name="name" required></div>
+    
+            <div><label for="email">Email</label></div>
+            <div><input type="email" id="email" name="email" required></div>
+    
+            <div><label for="address">Address</label></div>
+            <div><input type="text" id="address" name="address" required></div>
+    
+            <div><label for="mobile">Phone Number</label></div>
+            <div><input type="text" id="mobile" name="phone_number" pattern="[0-9]{10}" required></div>
+    
+            <div><label for="message">Any other Message</label></div>
+            <div><textarea id="message" name="message" rows="5" required></textarea></div>
+            <div><label for="type"></label></div>
+            <!-- Radio Button Group -->
+            <div class="radio-group">
+                <label>Do you have our app?</label>
+                <input type="radio" id="yes" name="app" value="yes">
+                <label for="yes">Yes</label>
+                <input type="radio" id="no" name="app" value="no">
+                <label for="no">No</label>
+            </div>
+            <div>
+            <div class="checkboxes">
+                Which type of dustbin you want?<br><br>
+                <select name="type" id="type">
+                    <option value="Basic">Basic SmartBin</option>
+                    <option value="Advanced SmartBin">Advanced SmartBin</option>
+                    <option value="Compact SmartBin">Compact SmartBin</option>
+                    <option value="Smart Recycling Bin">Smart Recycling Bin</option>
+                    <option value="Large-Capacity SmartBin">Large-Capacity SmartBin</option>    
+                </select>
+            </div>
+            </div>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+            
+        </form>
     <footer class="footer">
         <div class="container">
             <p>&copy; 2024 smart<span style="color: aqua;">bin</span> | Innovating Urban Waste Management</p>
